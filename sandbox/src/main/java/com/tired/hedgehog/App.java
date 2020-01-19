@@ -4,11 +4,20 @@
 package com.tired.hedgehog;
 
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
+
+    public static double distance(Point p1, Point p2) {
+        return Math.sqrt((p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y));
+
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        Point p1 = new Point(3, 44);
+        Point p2 = new Point(52, 89);
+
+        System.out.println(App.distance(p1, p2));
+
+        System.out.println(p1.distance2(p2));
+
     }
 }
